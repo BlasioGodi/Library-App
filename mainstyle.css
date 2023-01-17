@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Overpass:ital,wght@0,100;0,200;0,400;0,600;1,100;1,500&display=swap");
+
 :root {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Lobster", cursive;
+  font-family: "Overpass", sans-serif;
 }
 
 html,
@@ -21,7 +24,7 @@ body {
   background-color: white;
   display: grid;
   margin: 100px;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 0.8fr 3fr 0.8fr;
   gap: 0px;
   border-radius: 50px;
 }
@@ -33,10 +36,45 @@ body {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-.sidebar {
+.right-sidebar {
   background-color: rgb(228, 227, 227);
   justify-items: right;
   align-items: right;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+.left-sidebar {
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  background-color: rgb(228, 227, 227);
+  justify-items: right;
+  align-items: right;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.hor-line {
+  border-bottom: 1px solid black;
+  padding: 12px;
+}
+
+.section-one {
+  background-color: red;
+  width: 100%;
+  border-top-left-radius: inherit;
+  text-align: center;
+}
+
+.section-two {
+  background-color: yellow;
+  width: 100%;
+  text-align: center;
+}
+
+.section-three {
+  background-color: red;
+  width: 100%;
+  border-bottom-left-radius: inherit;
+  text-align: center;
 }
