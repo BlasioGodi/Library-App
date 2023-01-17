@@ -47,7 +47,7 @@ body {
 .left-sidebar {
   display: grid;
   grid-template-rows: 1fr 1.5fr 1fr;
-  background-color: rgb(228, 227, 227);
+  background-color: white;
   justify-items: right;
   align-items: right;
   border-top-left-radius: 50px;
@@ -55,26 +55,32 @@ body {
 }
 
 .hor-line {
-  border-bottom: 1px solid black;
-  padding: 12px;
+  border-bottom: 1px solid lightgrey;
+  width: 70%;
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .section-one {
-  background-color: red;
   width: 100%;
   border-top-left-radius: inherit;
   text-align: center;
+  position: relative;
 }
 
 .section-two {
-  background-color: yellow;
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .section-three {
-  background-color: red;
   width: 100%;
   border-bottom-left-radius: inherit;
   text-align: center;
+  position: relative;
 }
