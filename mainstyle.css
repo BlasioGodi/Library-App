@@ -11,6 +11,11 @@ body {
   padding: 0%;
 }
 
+ul {
+  list-style-type: none;
+  display: grid;
+}
+
 .main-con {
   background-color: rgb(252, 242, 230);
   display: grid;
@@ -29,6 +34,8 @@ body {
   grid-template-columns: 0.8fr 3fr 0.8fr;
   gap: 0px;
   border-radius: 50px;
+  width: auto;
+  height: auto;
 }
 
 .lib-display {
@@ -75,7 +82,7 @@ body {
 
 #profile {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 30%;
   text-align: center;
   align-items: center;
@@ -83,14 +90,12 @@ body {
 }
 #handle {
   position: absolute;
-  top: 70%;
-  left: 35%;
+  top: 40%;
   padding: 12px;
   text-align: center;
   align-items: center;
   font-family: var(--font-family-body);
   font-size: 0.75rem;
-  justify-content: start;
 }
 
 .prof-icon {
@@ -108,10 +113,56 @@ body {
   text-align: center;
   position: relative;
 }
-
 .section-three {
   width: 100%;
   border-bottom-left-radius: inherit;
   text-align: center;
   position: relative;
+}
+
+.section-two ul > li,
+.section-three ul > li {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 15px;
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  padding-block: 15px;
+  color: rgb(190, 190, 190);
+  border-radius: 35px;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.section-two svg {
+  width: 24px;
+  height: 24px;
+}
+
+.section-two ul > li:hover,
+.section-three ul > li:hover {
+  background-color: green;
+  border-radius: 35px;
+}
+
+#stay-at-home,
+#stay-at-home p {
+  background-color: rgb(226, 255, 184);
+  width: 50%;
+  height: 15%;
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  border-radius: 20px;
+}
+
+#stay-at-home {
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: green;
 }
