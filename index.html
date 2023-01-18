@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Lobster&family=Overpass:ital,wght@0,100;0,200;0,400;0,600;1,100;1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="buttonstyle.css">
 
 </head>
 
@@ -72,39 +73,86 @@
                     </div>
                 </div>
                 <div class="lib-display">
-                    <div class="lib-header"></div>
-                    <div class="lib-books-display">
-                        <div class="display-1">
-                            <div class="display-card"><img src="./src/img/DanBrownOrigin.jpg" alt=""></div>
-                            <p class="book-title">Origin</p>
-                            <p class="book-author">Dan Brown</p>
+                    <div class="lib-header">
+                        <div>
+                            <ul>
+                                <li>Popular</li>
+                                <li>Business</li>
+                                <li>Self-improvement</li>
+                            </ul>
                         </div>
-                        <div class="display-2">
-                            <div class="display-card"><img src="./src/img/DanBrownLostSymbol.jpg" alt=""></div>
-                            <p class="book-title">Lost Symbol</p>
-                            <p class="book-author">Dan Brown</p>
-                        </div>
-                        <div class="display-3">
-                            <div class="display-card"><img src="./src/img/HPandtheDeathlyHallows.jpg" alt=""></div>
-                            <p class="book-title">HarryPotter & the Deathly Hallows</p>
-                            <p class="book-author">J.K.Rowlings</p>
-                        </div>
-                        <div class="display-4">
-                            <div class="display-card"><img src="./src/img/HPandtheChamberofSecrets.jpg" alt=""></div>
-                            <p class="book-title">HarryPotter & the Chamber of Secrets</p>
-                            <p class="book-author">J.K.Rowlings</p>
-                        </div>
-                        <div class="display-5">
-                            <div class="display-card"><img src="./src/img/PersonalMBA.jpg" alt=""></div>
-                            <p class="book-title">Personal MBA</p>
-                            <p class="book-author">Josh Kaufman</p>
+                        <div class="search-bar"> <img src="./src/img/magnify.png" class="search-icon" alt="">
+                            <p>Search Here</p>
                         </div>
                     </div>
-                    <div class="lib-books-list"></div>
+                    <div class="lib-books-display">
+                        <div class="display-1">
+                            <div class="display-card">
+                                <img src="./src/img/DanBrownOrigin.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="text">Origin by Dan Brown</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-2">
+                            <div class="display-card"><img src="./src/img/DanBrownLostSymbol.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="text">Lost Symbol by Dan Brown</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-3">
+                            <div class="display-card"><img src="./src/img/HPandtheDeathlyHallows.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="text">HarryPotter & the Deathly Hallows by J.K.Rowlings </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-4">
+                            <div class="display-card"><img src="./src/img/HPandtheChamberofSecrets.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="text">HarryPotter & the Chamber of Secrets by J.K.Rowlings </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-5">
+                            <div class="display-card"><img src="./src/img/PersonalMBA.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="text">Personal MBA by Josh Kaufman </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib-books-list">
+                        <p class="books-list-header">Your books</p>
+                        <button class="button">Add New Book</button>
+                    </div>
                 </div>
 
                 <div class="right-sidebar">
-
+                    <div class="right-sd-header">Book Details</div>
+                    <div class="display-card2">
+                        <img src="./src/img/the-alchemist-paulo-coelho.jpg" alt="">
+                        <div class="overlay-2">
+                            <div class="text">The Alchemist by Paulo Coelho </div>
+                        </div>
+                    </div>
+                    <p class="right-sd-title">The Alchemist</p>
+                    <p class="right-sd-author">Paulo Coelho</p>
+                    <div class="right-sd-stats">
+                        <ul>
+                            <li class="stats">196</li>
+                            <li class="stats-2">Pages</li>
+                        </ul>
+                        <ul>
+                            <li class="stats">2022</li>
+                            <li class="stats-2">Release</li>
+                        </ul>
+                        <ul>
+                            <li class="stats">15.8k</li>
+                            <li class="stats-2">Readers</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
