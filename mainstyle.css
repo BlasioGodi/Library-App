@@ -3,6 +3,8 @@
 :root {
   --font-family-header: "Lobster", cursive;
   --font-family-body: "Overpass", sans-serif;
+  --font-family-title: "Lobster", cursive;
+  --font-family-author: "Overpass", sans-serif;
 }
 
 html,
@@ -13,7 +15,24 @@ body {
 
 ul {
   list-style-type: none;
-  display: grid;
+}
+
+li {
+  margin-top: 10px;
+}
+
+li:first-child {
+  margin-top: 0;
+}
+
+p {
+  font-family: var(--font-family-author);
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .main-con {
@@ -39,12 +58,74 @@ ul {
 }
 
 .lib-display {
-  background-color: white;
   justify-items: right;
   align-items: right;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  display: grid;
+  grid-template-rows: 1fr 7fr 3fr;
 }
+
+.lib-header {
+  background-color: yellow;
+  width: 100%;
+}
+
+.lib-books-display {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  gap: 5px;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5 {
+  position: relative;
+  padding: 5px;
+}
+
+.display-card {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  border-radius: 25px;
+  min-width: 90%;
+  min-height: 75%;
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.display-card img {
+  border-radius: inherit;
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.display-card img:hover {
+  border: 1px solid green;
+}
+
+.lib-books-list {
+  background-color: yellow;
+  width: 100%;
+}
+
+.book-title {
+  font-family: var(--font-family-title);
+  position: absolute;
+  bottom: 5%;
+  font-size: 0.9vw;
+}
+
+.book-author {
+  position: absolute;
+  bottom: 0%;
+  font-size: 0.85vw;
+  color: lightgrey;
+}
+
 .right-sidebar {
   background-color: rgb(228, 227, 227);
   justify-items: right;
@@ -70,8 +151,6 @@ ul {
   left: 15%;
   bottom: 0;
   justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 
 .section-one {
@@ -92,6 +171,7 @@ ul {
   position: absolute;
   top: 40%;
   padding: 12px;
+  color: grey;
   text-align: center;
   align-items: center;
   font-family: var(--font-family-body);
@@ -120,19 +200,34 @@ ul {
   position: relative;
 }
 
+.section-two ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85%;
+}
+
+.section-three ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45%;
+}
+
 .section-two ul > li,
 .section-three ul > li {
-  display: grid;
-  grid-auto-flow: column;
+  padding-left: 1em;
+  display: flex;
   gap: 15px;
+  width: 150px;
+  height: 30px;
   font-family: var(--font-family-body);
   font-size: 0.9rem;
-  padding-block: 15px;
   color: rgb(190, 190, 190);
   border-radius: 35px;
+  text-align: center;
   align-items: center;
   justify-content: start;
-  text-align: center;
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
 }
@@ -140,12 +235,15 @@ ul {
 .section-two svg {
   width: 24px;
   height: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-two ul > li:hover,
 .section-three ul > li:hover {
-  background-color: green;
+  background-color: rgb(97, 196, 97);
   border-radius: 35px;
+  color: white;
 }
 
 #stay-at-home,
@@ -156,7 +254,7 @@ ul {
   position: absolute;
   bottom: 20%;
   left: 15%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 #stay-at-home {
