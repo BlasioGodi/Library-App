@@ -73,16 +73,104 @@ textarea {
   border-radius: 0.25rem;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px hsl(213, 90%, 70%);
+}
+
+/*Input, Select and Text area types*/
 input[type="text"],
 input[type="email"],
 input[type="number"],
 select,
 textarea {
-  font: 1.25rem / 1.5 sans-serif;
+  font-family: var(--font-family-body);
+  font-size: 1.25rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 0.5rem 0.75rem;
+}
+
+textarea {
+  min-height: 10rem;
+}
+
+/*Radio Button and Checkboxes*/
+
+input[type="radio"],
+input[type="checkbox"] {
+  height: 1.5em;
+  width: 1.5em;
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-image: radial-gradient(
+    hsl(213, 73%, 50%) 40%,
+    transparent calc(40% + 1px)
+  );
+}
+
+input[type="checkbox"]:checked {
+  background: url("images/check.svg") no-repeat center / 75% auto;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* Firefox */
+  color: hsl(0, 0%, 69%);
+  font-family: var(--font-family-body);
+}
+
+button {
+  font: 1.25rem sans-serif;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+}
+
+button[type="submit"] {
+  background-color: hsl(213, 73%, 50%);
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(213, 73%, 40%);
+}
+
+button[type="reset"] {
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+button[type="reset"]:hover {
+  text-decoration: none;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.large-label {
+  display: inline-block;
+  font-family: var(--font-family-title);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.small-label {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 1.5rem;
+  font: 1.25rem sans-serif;
 }
 
 /*Form Defaults Settings - End*/
@@ -114,6 +202,7 @@ textarea {
   align-items: right;
   display: grid;
   grid-template-rows: 1fr 4fr 3fr;
+  position: relative;
 }
 
 .lib-header {
@@ -491,6 +580,22 @@ textarea {
   font-size: 12px;
   font-weight: 400;
   color: green;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  width: 550px;
+  position: absolute;
+  top: 15%;
+  left: 23%;
 }
 
 .button {
