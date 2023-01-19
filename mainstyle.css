@@ -145,6 +145,15 @@ button[type="submit"]:hover {
   background-color: hsl(213, 73%, 40%);
 }
 
+button[type="button"] {
+  background-color: hsl(213, 46%, 45%);
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: hsl(213, 56%, 24%);
+}
+
 button[type="reset"] {
   text-decoration: underline;
   margin-left: 1rem;
