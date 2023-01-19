@@ -184,6 +184,12 @@ button[type="reset"]:hover {
   height: 100vh;
 }
 
+.main-con#blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
 .main-section {
   background-color: white;
   display: grid;
@@ -201,7 +207,7 @@ button[type="reset"]:hover {
   justify-items: right;
   align-items: right;
   display: grid;
-  grid-template-rows: 1fr 4fr 3fr;
+  grid-template-rows: 1fr 3fr 4fr;
   position: relative;
 }
 
@@ -214,6 +220,7 @@ button[type="reset"]:hover {
   display: inline-block;
   margin-right: 3%;
   font-family: var(--font-family-body);
+  font-size: 2vh;
   color: grey;
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
@@ -247,6 +254,7 @@ button[type="reset"]:hover {
 
 .search-bar p {
   position: absolute;
+  font-size: 2vh;
   left: 6%;
 }
 .search-icon {
@@ -368,7 +376,7 @@ button[type="reset"]:hover {
 
 .books-list-header {
   position: absolute;
-  top: 0;
+  top: 10%;
   font-family: var(--font-family-title);
   font-size: 1.5rem;
 }
@@ -582,20 +590,22 @@ button[type="reset"]:hover {
   color: green;
 }
 
-.form-popup {
-  display: none;
+.form-popup#popup {
   position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
 }
 
-.form-container {
-  width: 550px;
-  position: absolute;
-  top: 15%;
-  left: 23%;
+.form-popup#popup:active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .button {
@@ -608,6 +618,7 @@ button[type="reset"]:hover {
   border: none;
   position: absolute;
   right: 2%;
+  top: 15%;
   color: #f0f0f0;
   cursor: pointer;
   z-index: 1;
