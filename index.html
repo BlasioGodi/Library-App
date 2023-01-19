@@ -125,7 +125,30 @@
                     </div>
                     <div class="lib-books-list">
                         <p class="books-list-header">Your books</p>
-                        <button class="button">Add New Book</button>
+                        <button class="button" onclick="openForm()">Add New Book</button>
+
+                        <div class="form-popup">
+                            <form action="" class="form-container">
+                                <div class="form-input">
+                                    <label for="book_title">Book Title</label>
+                                    <input type="text" id="bookTitle" name="bookTitle" placeholder="Title">
+                                </div>
+                                <div class="form-input">
+                                    <label for="author">Author</label>
+                                    <input type="text" id="author" name="author" placeholder="Author">
+                                </div>
+                                <div class="form-input">
+                                    <label for="year">Year</label>
+                                    <input type="number" id="year" name="year" placeholder="Year">
+                                </div>
+                                <div class="form-input">
+                                    <label for="publisher">Publisher</label>
+                                    <input type="text" id="publisher" name="publisher" maxlength="25"
+                                        placeholder="Publisher">
+                                </div>
+                                <div><button type="submit" class="btn">submit</button></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
