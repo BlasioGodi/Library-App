@@ -297,8 +297,8 @@ button[type="reset"]:hover {
   right: 5%;
   top: 5%;
   border-radius: 25px;
-  min-width: 90%;
-  min-height: 75%;
+  width: 90%;
+  height: 100%;
 }
 
 .display-card2 {
