@@ -1,18 +1,25 @@
-//SUPER CLASS
-function Sport(playername, netWorth, wins, losses) {
+//Super Class Constructor
+function Sport(playername, networth) {
     this.playername = playername;
-    this.netWorth = netWorth;
-    this.wins = wins;
-    this.losses = losses;
+    this.networth = networth;
+
 }
+
+Sport.prototype.greet = function () {
+    return `${this.playername} says hello!!`;
+}
+
 //Prototype of Super Class
-console.log(Object.getPrototypeOf(Sport));
+console.log("Before: ", Object.getPrototypeOf(Sport));
 
 let messi = new Sport("Lionel Messi", "2.5 Billion USD");
 console.log(messi);
 console.log(Object.getPrototypeOf(messi));
 
-//A new constructor, that takes up properties from the SuperClass Constructor, SPORT
+//Prototype of Super Class
+console.log("After: ", Object.getPrototypeOf(Sport));
+
+//Sub-class Constructors that take properties of Superclass Constructor
 function Tennis(playername, weight) {
     //Call to constructor   
     Sport.call(this, playername);
@@ -36,5 +43,22 @@ FootBall.prototype.fplayer = function () {
 
 const roger = new Tennis("Roger Federer", "75kgs");
 const ronaldo = new FootBall("Cristiano Ronaldo", "Monkey");
+
+// //Attempting to access methods up the prototype chain. Uncomment to test this
+// console.log(ronaldo.greet());
+// console.log(roger.greet());
+
+Object.setPrototypeOf(Tennis.prototype, Sport.prototype);
+Object.setPrototypeOf(FootBall.prototype, Sport.prototype);
+
+Sport.prototype.greet = function () {
+    return `${this.playername} says hello!!`;
+}
+
+//Method output of Sub-class Constructors
 console.log(roger.tplayer());
 console.log(ronaldo.fplayer());
+
+//Setprototype of and access the greet method in the Sport constructor
+console.log(ronaldo.greet());
+console.log(roger.greet());
