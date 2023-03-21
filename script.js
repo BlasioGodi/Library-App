@@ -50,12 +50,14 @@ Books.prototype.BookInfo = function () {
     console.log(this.genre);
 }
 
+//GENRE SUB-CLASS
 function Thriller(title, author, genre) {
     this.title = title;
     this.author = author;
     this.genre = genre;
 }
 
+//SUB-CLASS PROTOTYPE
 Thriller.prototype = Object.create(Books.prototype);
 
 const newBook = new Thriller("Harry Potter and The Chamber of Secrets", "J.K. Rowlings", "Thriller");
