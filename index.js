@@ -1,7 +1,9 @@
 //SUPER CLASS
-function Sport(name, netWorth) {
-    this.name = name;
+function Sport(playername, netWorth, wins, losses) {
+    this.playername = playername;
     this.netWorth = netWorth;
+    this.wins = wins;
+    this.losses = losses;
 }
 //Prototype of Super Class
 console.log(Object.getPrototypeOf(Sport));
@@ -11,19 +13,28 @@ console.log(messi);
 console.log(Object.getPrototypeOf(messi));
 
 //A new constructor, that takes up properties from the SuperClass Constructor, SPORT
-function Tennis(stats, wins, losses) {
+function Tennis(playername, weight) {
     //Call to constructor   
-    Sport.call(this, name, netWorth);
-    this.stats = stats;
-    this.wins = wins;
-    this.losses = losses;
+    Sport.call(this, playername);
+    this.weight = weight;
 }
 
-function FootBall(stats, wins, losses, agility) {
-    Tennis.call(this, stats, wins, losses);
+function FootBall(playername, agility) {
+    //Call to constructor   
+    Sport.call(this, playername);
     this.agility = agility;
 }
 
+//String Interpolation within BACKTICKS
 Tennis.prototype.tplayer = function () {
-    return '${this.name} has a rating of ${this.stats}';
+    return `${this.playername} has a weight of ${this.weight}`;
 }
+
+FootBall.prototype.fplayer = function () {
+    return `${this.playername} has an agility of a ${this.agility}`;
+}
+
+const roger = new Tennis("Roger Federer", "75kgs");
+const ronaldo = new FootBall("Cristiano Ronaldo", "Monkey");
+console.log(roger.tplayer());
+console.log(ronaldo.fplayer());
