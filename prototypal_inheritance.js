@@ -2,7 +2,6 @@
 function Sport(playername, networth) {
     this.playername = playername;
     this.networth = networth;
-
 }
 
 Sport.prototype.greet = function () {
@@ -63,3 +62,5 @@ console.log(ronaldo.fplayer());
 //Method output of Super-class Constructor
 console.log(ronaldo.greet());
 console.log(roger.greet());
+
+console.log(this === true);

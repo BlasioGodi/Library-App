@@ -86,44 +86,64 @@
                     </div>
                     <div class="lib-books-display">
                         <div class="display-1">
-                            <div class="display-card">
+                            <div id="display-1" class="display-card">
                                 <img src="./src/img/DanBrownOrigin.jpg" alt="">
                                 <div class="overlay">
-                                    <div class="text">Origin by Dan Brown</div>
+                                    <div class="text">
+                                        <div id="title1">Origin</div> by <div id="author1">Dan Brown</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="display-2">
                             <div class="display-card"><img src="./src/img/DanBrownLostSymbol.jpg" alt="">
                                 <div class="overlay">
-                                    <div class="text">Lost Symbol by Dan Brown</div>
+                                    <div class="text">
+                                        <div id="title2">Lost Symbol</div> by <div id="author2">Dan Brown</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="display-3">
                             <div class="display-card"><img src="./src/img/HPandtheDeathlyHallows.jpg" alt="">
                                 <div class="overlay">
-                                    <div class="text">HarryPotter & the Deathly Hallows by J.K.Rowlings </div>
+                                    <div class="text">
+                                        <div id="title3">HarryPotter & the Deathly Hallows</div> by <div id="author3">
+                                            J.K Rowlings</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="display-4">
                             <div class="display-card"><img src="./src/img/HPandtheChamberofSecrets.jpg" alt="">
                                 <div class="overlay">
-                                    <div class="text">HarryPotter & the Chamber of Secrets by J.K.Rowlings </div>
+                                    <div class="text">
+                                        <div id="title4">HarryPotter & the Chamber of Secrets</div> by <div
+                                            id="author4">J.K.Rowlings</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="display-5">
                             <div class="display-card"><img src="./src/img/PersonalMBA.jpg" alt="">
                                 <div class="overlay">
-                                    <div class="text">Personal MBA by Josh Kaufman </div>
+                                    <div class="text">
+                                        <div id="title5">Personal MBA</div> by <div id="author5">Josh Kaufman</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lib-books-list">
-                        <p class="books-list-header">Your books</p>
+                        <p class="books-list-header">Your books
+                        <ul id="books-list">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                        </p>
                         <button class="button" onclick="toggle()">Add New Book</button>
                     </div>
                 </div>
@@ -133,28 +153,29 @@
                     <div class="display-card2">
                         <img src="./src/img/the-alchemist-paulo-coelho.jpg" alt="">
                         <div class="overlay-2">
-                            <div class="text">The Alchemist by Paulo Coelho </div>
+                            <div class="text">The Alchemist byPaulo Coelho
+                            </div>
                         </div>
                     </div>
                     <p class="right-sd-title"><a href="#">The Alchemist</a></p>
-                    <p class="right-sd-author">Paulo Coelho</p>
-                    <div class="right-sd-stats">
-                        <ul>
-                            <li class="stats">196</li>
-                            <li class="stats-2">Pages</li>
-                        </ul>
-                        <ul>
-                            <li class="stats">2022</li>
-                            <li class="stats-2">Release</li>
-                        </ul>
-                        <ul>
-                            <li class="stats">15.8k</li>
-                            <li class="stats-2">Readers</li>
-                        </ul>
-                    </div>
+                    <p class="right-s>Paulo Coelho</p>
+                    <div class=" right-sd-stats">
+                    <ul>
+                        <li class="stats">196</li>
+                        <li class="stats-2">Pages</li>
+                    </ul>
+                    <ul>
+                        <li class="stats">2022</li>
+                        <li class="stats-2">Release</li>
+                    </ul>
+                    <ul>
+                        <li class="stats">15.8k</li>
+                        <li class="stats-2">Readers</li>
+                    </ul>
                 </div>
-
             </div>
+
+        </div>
         </div>
         <div class="form-popup" id="popup">
             <form action="#" class="form-container">
@@ -163,8 +184,8 @@
                     <input type="text" id="bookTitle" name="bookTitle" placeholder="Title">
                 </div>
                 <div class="full-width">
-                    <label for="author" class="large-label">Author</label>
-                    <input type="text" id="author" name="author" placeholder="Author">
+                    <label for class="large-label">Author</label>
+                    <input type="text" id name placeholder="Author">
                 </div>
                 <div class="form-input">
                     <label for="year" class="large-label">Year</label>
