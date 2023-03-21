@@ -1,6 +1,7 @@
 console.log("LIB_APP_INIT");
 
 //Existing books in library - Details gotten from the HTML main file
+//Feed these objects into an array
 const book1 = {
     title: document.getElementById("title1"),
     author: document.getElementById("author1")
@@ -62,12 +63,6 @@ const bookNew3 = new Book(titles.title3, authors.author3);
 const bookNew4 = new Book(titles.title4, authors.author4);
 const bookNew5 = new Book(titles.title5, authors.author5);
 
-bookNew1.ShowBook();
-bookNew2.ShowBook();
-bookNew3.ShowBook();
-bookNew4.ShowBook();
-bookNew5.ShowBook();
-
 const bookDisplay1 = document.getElementById("books-list");
 const booksElements = bookDisplay1.getElementsByTagName("li");
 
@@ -91,8 +86,10 @@ const BOOK = {
 
 let myLibrary = [];
 
-//SUPER CLASS METHOD
-Book.prototype.addBookToLibrary = function () {
+
+function addBookToLibrary() {
+    //Reference call to SuperClass Constructor
+
     var book_title = document.querySelector('#bookTitle').value;
     var book_author = document.querySelector('#author').value;
     var book_year = document.querySelector('#year').value;
@@ -103,7 +100,18 @@ Book.prototype.addBookToLibrary = function () {
     myLibrary.push(book_year);
     myLibrary.push(book_publisher);
 
-    // myLibrary.forEach(function (book) {
-    //     console.log(book);
-    // });
+    myLibrary.forEach(function (book) {
+        console.log(book);
+    });
+}
+
+BOOK.submit.addEventListener('click', addBookToLibrary);
+
+//Form Popup 
+function toggle() {
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('active');
+
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
 }
