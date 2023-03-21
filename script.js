@@ -76,6 +76,8 @@ booksElements[2].innerHTML = " 3. " + titles.title3 + " by " + authors.author3;
 booksElements[3].innerHTML = " 4. " + titles.title4 + " by " + authors.author4;
 booksElements[4].innerHTML = " 5. " + titles.title5 + " by " + authors.author5;
 
+
+//OBJECT TO ACCESS FORM ELEMENTS - Continue from Here
 const BOOK = {
     title: document.getElementById("bookTitle"),
     author: document.getElementById("author"),
@@ -86,10 +88,9 @@ const BOOK = {
 
 let myLibrary = [];
 
-
 function addBookToLibrary() {
     //Reference call to SuperClass Constructor
-
+    Book.call(this, title, author, year, publisher);
     var book_title = document.querySelector('#bookTitle').value;
     var book_author = document.querySelector('#author').value;
     var book_year = document.querySelector('#year').value;
