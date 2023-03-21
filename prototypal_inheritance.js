@@ -48,6 +48,7 @@ const ronaldo = new FootBall("Cristiano Ronaldo", "Monkey");
 // console.log(ronaldo.greet());
 // console.log(roger.greet());
 
+//Setting properties of Sub-class constructor to inherit the Super-class constructor
 Object.setPrototypeOf(Tennis.prototype, Sport.prototype);
 Object.setPrototypeOf(FootBall.prototype, Sport.prototype);
 
@@ -59,6 +60,6 @@ Sport.prototype.greet = function () {
 console.log(roger.tplayer());
 console.log(ronaldo.fplayer());
 
-//Setprototype of and access the greet method in the Sport constructor
+//Method output of Super-class Constructor
 console.log(ronaldo.greet());
 console.log(roger.greet());
