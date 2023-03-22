@@ -302,11 +302,11 @@ button[type="reset"]:hover {
 }
 
 .display-card2 {
-  position: absolute;
-  left: 25%;
-  right: 5%;
-  top: 15%;
+  position: relative;
   border-radius: 20px;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
   width: 50%;
   min-height: 30%;
 }
@@ -415,6 +415,8 @@ button[type="reset"]:hover {
 }
 
 .right-sidebar {
+  display: grid;
+  grid-template-rows: 0.3fr 0.55fr 1fr;
   background-color: rgb(243, 240, 240);
   justify-items: left;
   align-items: left;
@@ -424,52 +426,64 @@ button[type="reset"]:hover {
 }
 
 .right-sidebar ul > li {
-  margin-right: 0%;
   font-family: var(--font-family-body);
   color: grey;
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
 }
 
-.right-sidebar ul {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .right-sd-header {
+  position: relative;
+  margin: auto;
+  margin-bottom: 5%;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
   font-family: var(--font-family-title);
   font-size: 2vh;
-  position: absolute;
-  left: 35%;
-  top: 10%;
 }
 
 .right-sd-title {
   font-family: var(--font-family-title);
   font-size: 1.8vh;
-  position: absolute;
-  left: 35%;
-  top: 45%;
 }
 
 .right-sd-author {
   font-family: var(--font-family-body);
-  font-size: 1.4vh;
+  font-size: 2vh;
   font-weight: 400;
   color: grey;
-  position: absolute;
-  left: 38%;
-  top: 50%;
 }
 
 .right-sd-stats {
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  width: fit-content;
   font-family: var(--font-family-body);
   color: grey;
-  position: absolute;
-  top: 55%;
 }
 
-.stats {
+.right-sd-stats ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+}
+
+.right-sd-stats li {
+  margin: auto;
+  padding: 0;
+  width: 20%;
+  margin-right: 1em; /* Add some spacing between list items */
+  margin-bottom: 0.5em; /* Add some spacing between rows */
+}
+
+.stats-title {
   font-size: 1.8vh;
   font-weight: 600;
   color: black;
