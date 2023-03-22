@@ -4,27 +4,37 @@ console.log("LIB_APP_INIT");
 //Feed these objects into an array
 const book1 = {
     title: document.getElementById("title1"),
-    author: document.getElementById("author1")
+    author: document.getElementById("author1"),
+    year: "2017",
+    publisher: "Arnoldo Mondadori Editor"
 }
 
 const book2 = {
     title: document.getElementById("title2"),
-    author: document.getElementById("author2")
+    author: document.getElementById("author2"),
+    year: "2009",
+    publisher: "Doubleday (US) Transworld (UK)"
 }
 
 const book3 = {
     title: document.getElementById("title3"),
-    author: document.getElementById("author3")
+    author: document.getElementById("author3"),
+    year: "2007",
+    publisher: "Bloomsbury Publishing"
 }
 
 const book4 = {
     title: document.getElementById("title4"),
-    author: document.getElementById("author4")
+    author: document.getElementById("author4"),
+    year: "1998",
+    publisher: "Bloomsbury Publishing"
 }
 
 const book5 = {
     title: document.getElementById("title5"),
-    author: document.getElementById("author5")
+    author: document.getElementById("author5"),
+    year: "2010",
+    publisher: "Portfolio/Penguin"
 }
 
 //Objects 
@@ -56,26 +66,16 @@ Book.prototype.ShowBook = function () {
     console.log(this.title);
     console.log(this.author);
 }
-//DEFINE AND FETCH BOOK DETAILS FROM DOM
-const bookNew1 = new Book(titles.title1, authors.author1);
-const bookNew2 = new Book(titles.title2, authors.author2);
-const bookNew3 = new Book(titles.title3, authors.author3);
-const bookNew4 = new Book(titles.title4, authors.author4);
-const bookNew5 = new Book(titles.title5, authors.author5);
 
-const bookDisplay1 = document.getElementById("books-list");
-const booksElements = bookDisplay1.getElementsByTagName("li");
+const bookDisplay1 = document.getElementById("books-list-table");
+const booksElements = bookDisplay1.getElementsByTagName("td");
 
 for (let i = 0; i < booksElements.length; i++) {
-    console.log(booksElements[i].innerHTML);
+    if (booksElements[i].getElementsByClassName("button-read") == "Read Delete")
+        console.log(booksElements[i].innerText);
 }
 
-booksElements[0].innerHTML = " 1. " + titles.title1 + " by " + authors.author1;
-booksElements[1].innerHTML = " 2. " + titles.title2 + " by " + authors.author2;
-booksElements[2].innerHTML = " 3. " + titles.title3 + " by " + authors.author3;
-booksElements[3].innerHTML = " 4. " + titles.title4 + " by " + authors.author4;
-booksElements[4].innerHTML = " 5. " + titles.title5 + " by " + authors.author5;
-
+booksElements[0].innerHTML = titles.title1;
 
 //OBJECT TO ACCESS FORM ELEMENTS - Continue from Here
 const BOOK = {

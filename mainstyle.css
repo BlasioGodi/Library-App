@@ -49,6 +49,20 @@ form {
   gap: 2rem;
 }
 
+th,
+td {
+  padding: 2px;
+  text-align: center;
+}
+
+tr {
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+tr:hover {
+  background-color: rgb(243, 240, 240);
+}
+
 button,
 fieldset,
 input,
@@ -134,24 +148,8 @@ button {
   border-radius: 0.25rem;
   cursor: pointer;
   padding: 0.75rem 1.25rem;
-}
-
-button[type="submit"] {
-  background-color: hsl(213, 73%, 50%);
-  color: white;
-}
-
-button[type="submit"]:hover {
-  background-color: hsl(213, 73%, 40%);
-}
-
-button[type="button"] {
-  background-color: hsl(213, 46%, 45%);
-  color: white;
-}
-
-button[type="button"]:hover {
-  background-color: hsl(213, 56%, 24%);
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
 }
 
 button[type="reset"] {
@@ -288,7 +286,6 @@ button[type="reset"]:hover {
 .display-4,
 .display-5 {
   position: relative;
-  padding: 5px;
 }
 
 .display-card {
@@ -382,13 +379,29 @@ button[type="reset"]:hover {
 .lib-books-list {
   width: 100%;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
 }
 
 .books-list-header {
-  position: absolute;
-  top: 10%;
   font-family: var(--font-family-title);
   font-size: 1.5rem;
+  margin: auto;
+  margin-left: 0;
+}
+
+#books-list-table {
+  position: absolute;
+  top: 30%;
+  border: 1px solid rgb(243, 240, 240);
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 95%;
+  text-align: center;
+  font-family: var(--font-family-body);
+}
+.books-list-row {
+  background-color: rgb(243, 240, 240);
 }
 
 #books-list {
@@ -651,7 +664,7 @@ button[type="reset"]:hover {
   border: none;
   position: absolute;
   right: 2%;
-  top: 15%;
+  top: 5%;
   color: #f0f0f0;
   cursor: pointer;
   z-index: 1;
@@ -709,4 +722,44 @@ button[type="reset"]:hover {
 .button:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+#book_submit {
+  background-color: hsl(213, 73%, 50%);
+  color: white;
+}
+
+#book_submit:hover {
+  background-color: hsl(213, 73%, 40%);
+}
+
+#book_close {
+  background-color: hsl(213, 46%, 45%);
+  color: white;
+}
+
+#book_close:hover {
+  background-color: hsl(213, 56%, 24%);
+}
+
+.button-read {
+  font: 1rem sans-serif;
+  padding: 0.75rem 1.25rem;
+  background-color: hsl(213, 46%, 45%);
+  color: white;
+}
+
+.button-read:hover {
+  background-color: hsl(213, 56%, 24%);
+}
+
+.button-delete {
+  font: 1rem sans-serif;
+  padding: 0.75rem 1.25rem;
+  background-color: hsl(9, 80%, 40%);
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: hsl(9, 80%, 28%);
 }

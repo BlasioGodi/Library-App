@@ -136,13 +136,39 @@
                     </div>
                     <div class="lib-books-list">
                         <p class="books-list-header">Your books
-                        <ul id="books-list">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                        </ul>
+                        <table id="books-list-table">
+                            <thead class="books-list-row">
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Year</th>
+                                <th>Publisher</th>
+                                <th>Status</th>
+                            </thead>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td><button class="button-read" type="button" onclick="">Read</button> <button
+                                        class="button-delete" type="button" onclick="">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td><button class="button-read" type="button" onclick="">Read</button> <button
+                                        class="button-delete" type="button" onclick="">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td><button class="button-read" type="button" onclick="">Read</button> <button
+                                        class="button-delete" type="button" onclick="">Delete</button></td>
+                            </tr>
+                        </table>
                         </p>
                         <button class="button" onclick="toggle()">Add New Book</button>
                     </div>
@@ -166,7 +192,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="form-popup" id="popup">
@@ -188,7 +213,7 @@
                     <input type="text" id="publisher" name="publisher" maxlength="25" placeholder="Publisher">
                 </div>
                 <div><button id="book_submit" type="button">Add</button></div>
-                <div><button type="button" onclick="toggle()">Close</button></div>
+                <div><button id="book_close" type="button" onclick="toggle()">Close</button></div>
             </form>
         </div>
     </main>
