@@ -14,6 +14,28 @@ body {
   padding: 0%;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background: rgba(255, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 0, 0, 0.4);
+}
+
 ul {
   list-style-type: none;
 }
@@ -60,13 +82,17 @@ td {
   text-align: center;
   width: 100px;
   overflow: hidden;
+  background-color: rgb(252, 252, 252);
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
 }
 
 tr {
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
 }
-tr:hover {
+tr:hover,
+td:hover {
   background-color: rgb(253, 204, 179);
 }
 
@@ -398,9 +424,15 @@ button[type="reset"]:hover {
   margin-left: 0;
 }
 
+.con-table {
+  overflow: auto;
+  height: 11rem;
+  position: relative;
+}
+
 #books-list-table {
   position: absolute;
-  top: 30%;
+  top: 2%;
   border: 1px solid rgb(243, 240, 240);
   border-radius: 10px;
   border-collapse: collapse;
@@ -410,7 +442,7 @@ button[type="reset"]:hover {
   font-family: var(--font-family-body);
   z-index: 1;
 }
-.books-list-row {
+.books-list-row th {
   background-color: rgb(243, 240, 240);
 }
 

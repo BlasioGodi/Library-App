@@ -1,5 +1,28 @@
 console.log("LIB_APP_INIT");
 
+//BOOK OBJECT TO ACCESS FORM PROPERTIES
+//Rewrite this code to include contructors and prototypal inheritance
+const BOOK = {
+    title: document.getElementById("bookTitle"),
+    author: document.getElementById("author"),
+    year: document.getElementById("year"),
+    publisher: document.getElementById("publisher"),
+    submit: document.getElementById("book_submit")
+}
+
+//SUPER CLASS CONSTRUCTOR
+function Book(title, author, year, publisher) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+    this.publisher = publisher;
+}
+//SUPER CLASS METHOD
+Book.prototype.ShowBook = function () {
+    console.log(this.title);
+    console.log(this.author);
+}
+
 const book1 = {
     title: document.getElementById("title1").innerText,
     author: document.getElementById("author1").innerText,
@@ -76,28 +99,6 @@ function deleteRows() {
     }
 }
 
-//SUPER CLASS CONSTRUCTOR
-function Book(title, author, year, publisher) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.publisher = publisher;
-}
-//SUPER CLASS METHOD
-Book.prototype.ShowBook = function () {
-    console.log(this.title);
-    console.log(this.author);
-}
-
-//OBJECT TO ACCESS FORM ELEMENTS - Continue from Here
-const BOOK = {
-    title: document.getElementById("bookTitle"),
-    author: document.getElementById("author"),
-    year: document.getElementById("year"),
-    publisher: document.getElementById("publisher"),
-    submit: document.getElementById("book_submit")
-}
-
 function addBookToLibrary() {
     const newBook = {
         book_title: document.querySelector('#bookTitle').value,
@@ -139,29 +140,3 @@ function toggle() {
     var popup = document.getElementById('popup');
     popup.classList.toggle('active');
 }
-
-//For Future Reference
-
-// const bookDisplay1 = document.getElementById("books-list-table");
-// const booksElements = bookDisplay1.getElementsByTagName("td");
-
-// for (let i = 0; i < booksElements.length; i++) {
-//     if (booksElements[i].innerText != "Read Delete")
-//         console.log(booksElements[i].innerText);
-// }
-// //Objects
-// const titles = {
-//     title1: book1.title.textContent,
-//     title2: book2.title.textContent,
-//     title3: book3.title.textContent,
-//     title4: book4.title.textContent,
-//     title5: book5.title.textContent
-// }
-
-// const authors = {
-//     author1: book1.author.textContent,
-//     author2: book2.author.textContent,
-//     author3: book3.author.textContent,
-//     author4: book4.author.textContent,
-//     author5: book5.author.textContent
-// }
