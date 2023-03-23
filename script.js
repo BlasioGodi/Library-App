@@ -1,14 +1,5 @@
 console.log("LIB_APP_INIT");
 
-//BOOK OBJECT ELEMENTS
-const BOOK = {
-    title: document.getElementById("bookTitle"),
-    author: document.getElementById("author"),
-    year: document.getElementById("year"),
-    publisher: document.getElementById("publisher"),
-    submit: document.getElementById("book_submit")
-}
-
 const book1 = {
     title: document.getElementById("title1").innerText,
     author: document.getElementById("author1").innerText,
@@ -46,45 +37,44 @@ const book5 = {
 
 let myLibrary = [book1, book2, book3, book4, book5];
 
-const table = document.getElementById("books-list-table");
+createLibrary();
 
-myLibrary.forEach(book => {
-    const row = table.insertRow();
-    const titleCell = row.insertCell(0);
-    titleCell.innerHTML = book.title;
+function createLibrary() {
+    const table = document.getElementById("books-list-table");
 
-    const authorCell = row.insertCell(1);
-    authorCell.innerHTML = book.author;
+    myLibrary.forEach(book => {
+        const row = table.insertRow();
 
-    const yearCell = row.insertCell(2);
-    yearCell.innerHTML = book.year;
+        const titleCell = row.insertCell(0);
+        titleCell.innerHTML = book.title;
 
-    const publisherCell = row.insertCell(3);
-    publisherCell.innerHTML = book.publisher;
+        const authorCell = row.insertCell(1);
+        authorCell.innerHTML = book.author;
 
-    const statusCell = row.insertCell(4);
-    statusCell.innerHTML = `<button class="button-read" type="button">Read</button> <button
+        const yearCell = row.insertCell(2);
+        yearCell.innerHTML = book.year;
+
+        const publisherCell = row.insertCell(3);
+        publisherCell.innerHTML = book.publisher;
+
+        const statusCell = row.insertCell(4);
+        statusCell.innerHTML = `<button class="button-read" type="button">Read</button> <button
     class="button-delete" type="button">Delete</button>`;
 
-});
-
-function addBookToLibrary() {
-    Book.call(this, title, author, year, publisher);
-
-    const newBook = {
-        book_title: document.querySelector('#bookTitle').value,
-        book_author: document.querySelector('#author').value,
-        book_year: document.querySelector('#year').value,
-        book_publisher: document.querySelector('#publisher').value
-    }
-
-    myLibrary.push(newBook);
-    myLibrary.forEach(function (book) {
-        console.log(book);
     });
 }
 
-BOOK.submit.addEventListener('click', addBookToLibrary);
+deleteRows();
+
+function deleteRows() {
+    const deleteButtons = document.getElementsByClassName('button-delete');
+    for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', function () {
+            const rowToDelete = this.parentNode.parentNode;
+            rowToDelete.remove();
+        });
+    }
+}
 
 //SUPER CLASS CONSTRUCTOR
 function Book(title, author, year, publisher) {
@@ -99,13 +89,48 @@ Book.prototype.ShowBook = function () {
     console.log(this.author);
 }
 
-const deleteButtons = document.getElementsByClassName('button-delete');
-for (let i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener('click', function () {
-        const rowToDelete = this.parentNode.parentNode;
-        rowToDelete.remove();
-    });
+//OBJECT TO ACCESS FORM ELEMENTS - Continue from Here
+const BOOK = {
+    title: document.getElementById("bookTitle"),
+    author: document.getElementById("author"),
+    year: document.getElementById("year"),
+    publisher: document.getElementById("publisher"),
+    submit: document.getElementById("book_submit")
 }
+
+function addBookToLibrary() {
+    const newBook = {
+        book_title: document.querySelector('#bookTitle').value,
+        book_author: document.querySelector('#author').value,
+        book_year: document.querySelector('#year').value,
+        book_publisher: document.querySelector('#publisher').value
+    }
+
+    myLibrary.push(newBook);
+
+    const table = document.getElementById("books-list-table");
+    const row = table.insertRow();
+
+    const titleCell = row.insertCell(0);
+    titleCell.innerHTML = newBook.book_title;
+
+    const authorCell = row.insertCell(1);
+    authorCell.innerHTML = newBook.book_author;
+
+    const yearCell = row.insertCell(2);
+    yearCell.innerHTML = newBook.book_year;
+
+    const publisherCell = row.insertCell(3);
+    publisherCell.innerHTML = newBook.book_publisher;
+
+    const statusCell = row.insertCell(4);
+    statusCell.innerHTML = `<button class="button-read" type="button">Read</button> <button
+    class="button-delete" type="button">Delete</button>`;
+
+    deleteRows();
+}
+
+BOOK.submit.addEventListener('click', addBookToLibrary);
 
 function toggle() {
     var blur = document.getElementById('blur');
