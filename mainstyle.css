@@ -82,7 +82,6 @@ td {
   text-align: center;
   width: 100px;
   overflow: hidden;
-  background-color: rgb(252, 252, 252);
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
 }
@@ -804,4 +803,8 @@ button[type="reset"]:hover {
 
 .button-delete:hover {
   background-color: hsl(9, 80%, 28%);
+}
+
+tr.active {
+  background-color: rgb(253, 204, 179);
 }

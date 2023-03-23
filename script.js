@@ -145,3 +145,15 @@ function toggle() {
     var popup = document.getElementById('popup');
     popup.classList.toggle('active');
 }
+
+readStatus();
+//Read button
+function readStatus() {
+    const readButtons = document.getElementsByClassName('button-read');
+    for (let i = 0; i < readButtons.length; i++) {
+        readButtons[i].addEventListener('click', function () {
+            const rowToHighlight = this.parentNode.parentNode;
+            rowToHighlight.classList.toggle('active');
+        });
+    }
+}
