@@ -23,6 +23,7 @@ Book.prototype.ShowBook = function () {
     console.log(this.author);
 }
 
+//Books Fetched from DOM
 const book1 = {
     title: document.getElementById("title1").innerText,
     author: document.getElementById("author1").innerText,
@@ -58,6 +59,7 @@ const book5 = {
     publisher: "Portfolio/Penguin"
 }
 
+//Library Created
 let myLibrary = [book1, book2, book3, book4, book5];
 
 createLibrary();
@@ -87,6 +89,7 @@ function createLibrary() {
     });
 }
 
+//Delete Row Function
 deleteRows();
 
 function deleteRows() {
@@ -99,6 +102,7 @@ function deleteRows() {
     }
 }
 
+//Add book to Library Function
 function addBookToLibrary() {
     const newBook = {
         book_title: document.querySelector('#bookTitle').value,
@@ -133,6 +137,7 @@ function addBookToLibrary() {
 
 BOOK.submit.addEventListener('click', addBookToLibrary);
 
+//Blur Form Background Function
 function toggle() {
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
