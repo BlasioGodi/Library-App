@@ -49,10 +49,17 @@ form {
   gap: 2rem;
 }
 
+table {
+  table-layout: fixed;
+  width: 210px;
+}
+
 th,
 td {
   padding: 2px;
   text-align: center;
+  width: 100px;
+  overflow: hidden;
 }
 
 tr {
@@ -60,7 +67,7 @@ tr {
   transition: all 0.3s ease-out !important;
 }
 tr:hover {
-  background-color: rgb(243, 240, 240);
+  background-color: rgb(253, 204, 179);
 }
 
 button,
@@ -276,7 +283,7 @@ button[type="reset"]:hover {
 .lib-books-display {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(90px, 0.5fr));
   gap: 5px;
 }
 
@@ -294,7 +301,7 @@ button[type="reset"]:hover {
   right: 5%;
   top: 5%;
   border-radius: 25px;
-  width: 90%;
+  width: 75%;
   height: 100%;
 }
 
@@ -381,6 +388,7 @@ button[type="reset"]:hover {
   position: relative;
   display: grid;
   grid-template-rows: 1fr 3fr;
+  overflow-wrap: normal;
 }
 
 .books-list-header {
@@ -398,7 +406,9 @@ button[type="reset"]:hover {
   border-collapse: collapse;
   width: 95%;
   text-align: center;
+  font-size: 0.8rem;
   font-family: var(--font-family-body);
+  z-index: 1;
 }
 .books-list-row {
   background-color: rgb(243, 240, 240);
@@ -743,8 +753,8 @@ button[type="reset"]:hover {
 }
 
 .button-read {
-  font: 1rem sans-serif;
-  padding: 0.75rem 1.25rem;
+  font: 0.8rem sans-serif;
+  padding: 0.2rem 1rem;
   background-color: hsl(213, 46%, 45%);
   color: white;
 }
@@ -754,8 +764,8 @@ button[type="reset"]:hover {
 }
 
 .button-delete {
-  font: 1rem sans-serif;
-  padding: 0.75rem 1.25rem;
+  font: 0.8rem sans-serif;
+  padding: 0.2rem 1rem;
   background-color: hsl(9, 80%, 40%);
   color: white;
 }
