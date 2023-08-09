@@ -1,0 +1,27 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "Odin Project Coursework - Library App",
+  "main": "prototypal_inheritance.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blasiogodi/Library-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blasiogodi/Library-App/issues"
+  },
+  "homepage": "https://github.com/blasiogodi/Library-App#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "font-awesome": "^4.7.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.0",
+    "owl-carousel": "^1.0.0"
+  }
+}

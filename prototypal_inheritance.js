@@ -64,3 +64,5 @@ console.log(ronaldo.greet());
 console.log(roger.greet());
 
 console.log(this === true);
+
+console.log("this is me")
